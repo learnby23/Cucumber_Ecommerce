@@ -70,6 +70,12 @@
 			<version>2.0.5</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/maven-surefire-common -->
+		<dependency>
+			<groupId>org.apache.maven.surefire</groupId>
+			<artifactId>maven-surefire-common</artifactId>
+			<version>2.22.2</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
@@ -89,17 +95,13 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.22.0</version>
+					<version>2.22.2</version>
 					<configuration>
 						<includes>
 							<include>testRunner.java</include>
 						</includes>
 						<parallel>methods</parallel>
 						<useUnlimitedThreads>true</useUnlimitedThreads>
-						<systemPropertyVariables>
-							<extent.reporter.spark.start>true</extent.reporter.spark.start>
-							<extent.reporter.spark.out>test-output/SparkReport/Spark.html</extent.reporter.spark.out>
-						</systemPropertyVariables>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -109,6 +111,13 @@
 					<configuration>
 						<source>1.7</source>
 						<target>1.7</target>
+						<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>1.18.24</version>
+						</path>
+						</annotationProcessorPaths>
 					</configuration>
 				</plugin>
 			</plugins>

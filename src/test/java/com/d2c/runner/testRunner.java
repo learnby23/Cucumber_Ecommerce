@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue="com.d2c.stepdefs",
 		monochrome=true,
 		dryRun = false,
-		plugin = {"pretty", "html:Reports/report.html",
+		plugin = {"pretty", "html:Reports/basicreport.html",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 				}
 		)
