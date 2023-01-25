@@ -1,27 +1,34 @@
 package com.d2c.stepdefs;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.d2c.poc.Facebboklogon;
 import io.cucumber.java.en.*;
 
-public class FacebookLogin {
-	WebDriver driver;
+public class FacebookLogin{
+	public WebDriver driver;
+	public Facebboklogon fl;
 	
-	@Given("setup browser and provide the url {string}")
-	public void setup_browser_and_provide_the_url(String url) {
-	driver=new ChromeDriver();
-	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	driver.get(url);
+	@Given("provide the url {string}")
+	public void provide_the_url(String url1) {
+		driver=new ChromeDriver();
+		fl=new Facebboklogon(driver);
+		driver.get(url1);
 	}
-
+	@When("enter the emailorphonenumber {string}")
+	public void enter_the_emailorphonenumber(String em) {
+		fl.enterEmailorphonenumber(em);
+	    
+	}
+	@When("enter the password {string}")
+	public void enter_the_password(String pas) {
+		fl.enterPassword(pas);
+	    
+	}
 	@Then("close the browser")
 	public void close_the_browser() {
-	    driver.close();
-	    driver.quit();
+	fl.closerBrowser();
 	}
 
 }

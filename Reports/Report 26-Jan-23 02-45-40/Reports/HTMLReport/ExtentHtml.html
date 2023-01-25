@@ -39,6 +39,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -48,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 25, 2023 01:48:01 am</span>
+			<span class='label blue darken-3 suite-start-time'>Jan 26, 2023 02:45:39 am</span>
 			</a>
 		</ul>
 	</div>
@@ -70,6 +71,16 @@
 			</div>
 			<!-- test toggle -->
 			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@Sanity</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
 			<!-- category toggle -->
 			<!-- clear filters -->
 			<div class='chip transparent hide'>
@@ -146,7 +157,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>2</span> steps passed</span>
+                    <span class='strong'>11</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -175,8 +186,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Facebook Page</span>
-						<span class='test-time'>Jan 25, 2023 01:48:03 am</span>
+						<span class='test-name'>ECommerce Signup</span>
+						<span class='test-time'>Jan 26, 2023 02:45:41 am</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -187,25 +198,70 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 17.658</span>
+	<span class='duration right label'>00 00 34.616</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Facebook Login Page</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Add a new category under Catalog</div>
 	</div>
 	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>email</td><td>password</td><td>p_name</td><td>p_desc</td></tr><tr><td>admin@yourstore.com</td><td>admin</td><td>Mouse</td><td>Remote Mouse</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='3' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(com.d2c.stepdefs.FacebookLogin.setup_browser_and_provide_the_url(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given setup browser and provide the url "https://www.facebook.com/login/"</div>
+		<li test-id='3' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Add a new category under Catalog</div>
 
+				<div class='category-list'>
+						<span class='category label'>@Sanity</span>
+				</div>
 
-		</li>
-		<li test-id='4' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(com.d2c.stepdefs.FacebookLogin.close_the_browser())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then close the browser</div>
+			<ul class='gc steps'>
+				<li test-id='4' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.provide_the_url_of_ecommerce(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given provide the url of ecommerce "https://admin-demo.nopcommerce.com/login"</h6>
 
+				</li>
+				<li test-id='5' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.input_the_email_address_and_password(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When input the email address "admin@yourstore.com" and password "admin"</h6>
 
+				</li>
+				<li test-id='6' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_log_in_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on Log in button</h6>
+
+				</li>
+				<li test-id='7' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_catalog_and_categories_option()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on catalog and categories option</h6>
+
+				</li>
+				<li test-id='8' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_add_new_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Add new button</h6>
+
+				</li>
+				<li test-id='9' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.provide_the_product_name_and_description(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When provide the product name "Mouse" and Description "Remote Mouse"</h6>
+
+				</li>
+				<li test-id='10' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.select_the_category_as_computers()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And select the category as Computers</h6>
+
+				</li>
+				<li test-id='11' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.upload_the_picture_of_product(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When upload the picture of product "C:\Users\Dell\OneDrive\Desktop\mouse.jpeg"</h6>
+
+				</li>
+				<li test-id='12' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_save_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on save button</h6>
+
+				</li>
+				<li test-id='13' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_logout_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on logout button</h6>
+
+				</li>
+				<li test-id='14' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.close_the_chrome_browser()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then close the chrome browser</h6>
+
+				</li>
+			</ul>
 		</li>
 	</ul>
 </div>
@@ -233,7 +289,67 @@
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Sanity</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 26, 2023 02:45:41 am</td>
+										<td class='linked' test-id='3'>Add a new category under Catalog</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -253,25 +369,49 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>11</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 25, 2023 01:48:01 am</div>
+					<div class='panel-lead'>Jan 26, 2023 02:45:39 am</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 25, 2023 01:48:20 am</div>
+			 		<div class='panel-lead'>Jan 26, 2023 02:46:16 am</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 19.091</div>
+					<div class='panel-lead'>00 00 36.321</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@Sanity</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -297,8 +437,8 @@
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 2,
-				passGrandChild: 2,
+				grandChildCount: 11,
+				passGrandChild: 11,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -310,7 +450,7 @@
 		
 		<script>
 			var timeline = {
-			        "Facebook Page":17.671
+			        "ECommerce Signup":34.624
 			};
 		</script>
 		

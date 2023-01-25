@@ -14,10 +14,10 @@
         <protocol>https</protocol>
         
         <!-- title of the document -->
-        <documentTitle>Extent Framework</documentTitle>
+        <documentTitle>Extent Reports</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>Build 1</reportName>
+        <reportName>Build</reportName>
 
 		<!-- timestamp format -->
 		<timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
