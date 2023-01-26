@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class AddCategory {
 	WebDriver ldriver;
@@ -13,30 +14,30 @@ public class AddCategory {
 		PageFactory.initElements(ldriver, this);
 	}
 
-	@FindBy(xpath="//p[normalize-space()='Catalog']")
+	@FindBy(xpath = "//p[normalize-space()='Catalog']")
 	WebElement catalog;
 
-	@FindBy(xpath="//p[normalize-space()='Categories']")
+	@FindBy(xpath = "//p[normalize-space()='Categories']")
 	WebElement categories;
 
-	@FindBy(css="a.btn.btn-primary")
+	@FindBy(css = "a.btn.btn-primary")
 	WebElement addnew;
 
-	@FindBy(css="input#Name")
+	@FindBy(css = "input#Name")
 	WebElement name;
 
-	@FindBy(xpath="//body//p")
-	WebElement description;
+	@FindBy(xpath = "//div[contains(text(),'New document')]")
+	WebElement newdoc;
 
-	@FindBy(css="Select#ParentCategoryId")
-	WebElement Ppcategory;
+	@FindBy(css = "Select#ParentCategoryId")
+	WebElement pcategory;
 
-	@FindBy(xpath="//input[@type='file']")
+	@FindBy(xpath = "//input[@type='file']")
 	WebElement upload;
 
-	@FindBy(xpath="//button[@name='save']")
+	@FindBy(xpath = "//button[@name='save']")
 	WebElement savebutton;
-	
+
 	public void clickonCatalog() {
 		catalog.click();
 	}
@@ -53,19 +54,16 @@ public class AddCategory {
 		name.sendKeys(pname);
 	}
 
-	public void provideDescription(String desc) {
-		description.sendKeys(desc);
-	}
-
 	public void selectCategory() {
-		
+		Select sc = new Select(pcategory);
+		sc.selectByVisibleText("Computers");
 	}
 
 	public void uploadProductImage(String link) {
 		upload.sendKeys(link);
 	}
-	public void clickonSave()
-	{
+
+	public void clickonSave() {
 		savebutton.click();
 	}
 }

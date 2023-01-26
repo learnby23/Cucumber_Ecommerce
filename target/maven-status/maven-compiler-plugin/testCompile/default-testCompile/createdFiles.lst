@@ -1,5 +1,7 @@
 com\d2c\runner\testRunner.class
+com\d2c\stepdefs\BaseClass.class
 com\d2c\poc\Epagelogin.class
+com\d2c\poc\AddCategory.class
 com\d2c\stepdefs\Epage.class
 com\d2c\stepdefs\FacebookLogin.class
 com\d2c\poc\Facebboklogon.class

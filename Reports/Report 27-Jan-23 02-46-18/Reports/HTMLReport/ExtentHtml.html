@@ -49,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 26, 2023 02:45:39 am</span>
+			<span class='label blue darken-3 suite-start-time'>Jan 27, 2023 02:46:17 am</span>
 			</a>
 		</ul>
 	</div>
@@ -77,6 +77,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@Sanity</a></li>
+					<li><a href='#'>@Smoke</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -119,7 +120,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='strong'>2</span> features passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -137,7 +138,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>1</span> scenarios passed</span>
+                    <span class='strong'>3</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -157,7 +158,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>11</span> steps passed</span>
+                    <span class='strong'>38</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -187,7 +188,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>ECommerce Signup</span>
-						<span class='test-time'>Jan 26, 2023 02:45:41 am</span>
+						<span class='test-time'>Jan 27, 2023 02:46:21 am</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -200,16 +201,99 @@
 
 <div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 34.616</span>
+	<span class='duration right label'>00 01 56.215</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Add a new category under Catalog</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: ECommerce All Field Data Entry</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>email</td><td>password</td><td>p_name</td><td>p_desc</td></tr><tr><td>admin@yourstore.com</td><td>admin</td><td>Mouse</td><td>Remote Mouse</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>email</td><td>password</td></tr><tr><td>admin@yourstore.com</td><td>admin</td></tr></table></div>
 	
 	
 	<ul class='steps'>
 		<li test-id='3' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>ECommerce All Field Data Entry</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Smoke</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='10' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.provide_the_url_of_ecommerce(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given provide the url of ecommerce "https://admin-demo.nopcommerce.com/login"</h6>
+
+				</li>
+				<li test-id='11' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded1.jpeg' src='../screenshotsembedded1.jpeg'>
+							</div>
+				</li>
+				<li test-id='12' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.input_the_email_address_and_password(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When input the email address "admin@yourstore.com" and password "admin"</h6>
+
+				</li>
+				<li test-id='13' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded2.jpeg' src='../screenshotsembedded2.jpeg'>
+							</div>
+				</li>
+				<li test-id='14' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_log_in_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on Log in button</h6>
+
+				</li>
+				<li test-id='21' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded6.jpeg' src='../screenshotsembedded6.jpeg'>
+							</div>
+				</li>
+				<li test-id='22' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.verfiy_the_title_as(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then verfiy the title as "Dashboard / nopCommerce administration"</h6>
+
+				</li>
+				<li test-id='23' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded7.jpeg' src='../screenshotsembedded7.jpeg'>
+							</div>
+				</li>
+				<li test-id='24' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_logout_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on logout button</h6>
+
+				</li>
+				<li test-id='27' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded9.jpeg' src='../screenshotsembedded9.jpeg'>
+							</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='29' status='pass'>
+
+	<span class='duration right label'>00 00 50.169</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Add a new category under Catalog</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>email</td><td>password</td><td>p_name</td></tr><tr><td>admin@yourstore.com</td><td>admin</td><td>Mouse</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='30' class='node scenario Pass' status='Pass'>
 			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Add a new category under Catalog</div>
 
 				<div class='category-list'>
@@ -217,49 +301,209 @@
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='4' class='gc given Pass' status='Pass'>
+				<li test-id='32' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="com.d2c.stepdefs.Epage.provide_the_url_of_ecommerce(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given provide the url of ecommerce "https://admin-demo.nopcommerce.com/login"</h6>
 
 				</li>
-				<li test-id='5' class='gc when Pass' status='Pass'>
+				<li test-id='33' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded10.jpeg' src='../screenshotsembedded10.jpeg'>
+							</div>
+				</li>
+				<li test-id='34' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="com.d2c.stepdefs.Epage.input_the_email_address_and_password(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When input the email address "admin@yourstore.com" and password "admin"</h6>
 
 				</li>
-				<li test-id='6' class='gc when Pass' status='Pass'>
+				<li test-id='35' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded11.jpeg' src='../screenshotsembedded11.jpeg'>
+							</div>
+				</li>
+				<li test-id='36' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_log_in_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on Log in button</h6>
 
 				</li>
-				<li test-id='7' class='gc when Pass' status='Pass'>
+				<li test-id='37' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded12.jpeg' src='../screenshotsembedded12.jpeg'>
+							</div>
+				</li>
+				<li test-id='38' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_catalog_and_categories_option()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on catalog and categories option</h6>
 
 				</li>
-				<li test-id='8' class='gc and Pass' status='Pass'>
+				<li test-id='39' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded13.jpeg' src='../screenshotsembedded13.jpeg'>
+							</div>
+				</li>
+				<li test-id='40' class='gc and Pass' status='Pass'>
 					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_add_new_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Add new button</h6>
 
 				</li>
-				<li test-id='9' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.d2c.stepdefs.Epage.provide_the_product_name_and_description(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When provide the product name "Mouse" and Description "Remote Mouse"</h6>
+				<li test-id='41' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded14.jpeg' src='../screenshotsembedded14.jpeg'>
+							</div>
+				</li>
+				<li test-id='42' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.Epage.provide_the_product_name(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When provide the product name "Mouse"</h6>
 
 				</li>
-				<li test-id='10' class='gc and Pass' status='Pass'>
+				<li test-id='43' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded15.jpeg' src='../screenshotsembedded15.jpeg'>
+							</div>
+				</li>
+				<li test-id='44' class='gc and Pass' status='Pass'>
 					<h6 class="step-name" title="com.d2c.stepdefs.Epage.select_the_category_as_computers()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And select the category as Computers</h6>
 
 				</li>
-				<li test-id='11' class='gc when Pass' status='Pass'>
+				<li test-id='45' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded16.jpeg' src='../screenshotsembedded16.jpeg'>
+							</div>
+				</li>
+				<li test-id='46' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="com.d2c.stepdefs.Epage.upload_the_picture_of_product(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When upload the picture of product "C:\Users\Dell\OneDrive\Desktop\mouse.jpeg"</h6>
 
 				</li>
-				<li test-id='12' class='gc when Pass' status='Pass'>
+				<li test-id='47' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded17.jpeg' src='../screenshotsembedded17.jpeg'>
+							</div>
+				</li>
+				<li test-id='48' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_save_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on save button</h6>
 
 				</li>
-				<li test-id='13' class='gc when Pass' status='Pass'>
+				<li test-id='49' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded18.jpeg' src='../screenshotsembedded18.jpeg'>
+							</div>
+				</li>
+				<li test-id='50' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="com.d2c.stepdefs.Epage.click_on_logout_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on logout button</h6>
 
 				</li>
-				<li test-id='14' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.d2c.stepdefs.Epage.close_the_chrome_browser()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then close the chrome browser</h6>
+				<li test-id='51' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
 
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded19.jpeg' src='../screenshotsembedded19.jpeg'>
+							</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Facebook Page</span>
+						<span class='test-time'>Jan 27, 2023 02:46:21 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario outline node' test-id='5' status='pass'>
+
+	<span class='duration right label'>00 01 55.276</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Facebook Login Page</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>emailornumber</td><td>password</td></tr><tr><td>9309732510</td><td>Shree@2022</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='6' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Facebook Login Page</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='9' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.FacebookLogin.provide_the_url(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given provide the url "https://www.facebook.com/login/"</h6>
+
+				</li>
+				<li test-id='15' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded3.jpeg' src='../screenshotsembedded3.jpeg'>
+							</div>
+				</li>
+				<li test-id='16' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.FacebookLogin.enter_the_emailorphonenumber(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When enter the emailorphonenumber "9309732510"</h6>
+
+				</li>
+				<li test-id='17' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded4.jpeg' src='../screenshotsembedded4.jpeg'>
+							</div>
+				</li>
+				<li test-id='18' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.FacebookLogin.enter_the_password(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When enter the password "Shree@2022"</h6>
+
+				</li>
+				<li test-id='19' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded5.jpeg' src='../screenshotsembedded5.jpeg'>
+							</div>
+				</li>
+				<li test-id='20' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.d2c.stepdefs.FacebookLogin.close_the_browser()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then close the browser</h6>
+
+				</li>
+				<li test-id='25' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.d2c.stepdefs.Epage.takesScreenShots(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Image</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshotsembedded8.jpeg' src='../screenshotsembedded8.jpeg'>
+							</div>
 				</li>
 			</ul>
 		</li>
@@ -331,8 +575,41 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 26, 2023 02:45:41 am</td>
-										<td class='linked' test-id='3'>Add a new category under Catalog</td>
+										<td>Jan 27, 2023 02:48:17 am</td>
+										<td class='linked' test-id='30'>Add a new category under Catalog</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Smoke</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 27, 2023 02:46:21 am</td>
+										<td class='linked' test-id='3'>ECommerce All Field Data Entry</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -357,37 +634,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>11</div>
+					<div class='panel-lead'>38</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 26, 2023 02:45:39 am</div>
+					<div class='panel-lead'>Jan 27, 2023 02:46:17 am</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 26, 2023 02:46:16 am</div>
+			 		<div class='panel-lead'>Jan 27, 2023 02:49:07 am</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 36.321</div>
+					<div class='panel-lead'>00 02 50.202</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -411,6 +688,15 @@
 									100%
 							</td>
 						</tr>
+						<tr>
+							<td>@Smoke</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
 					</table>
 				</div>
 			</div>
@@ -422,23 +708,23 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
+                parentCount: 2,
+				passParent: 2,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 1,
-				passChild: 1,
+				childCount: 3,
+				passChild: 3,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 11,
-				passGrandChild: 11,
+				grandChildCount: 38,
+				passGrandChild: 38,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -450,7 +736,7 @@
 		
 		<script>
 			var timeline = {
-			        "ECommerce Signup":34.624
+			        "ECommerce Signup":166.455,"Facebook Page":115.276
 			};
 		</script>
 		

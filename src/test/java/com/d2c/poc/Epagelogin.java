@@ -7,45 +7,40 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Epagelogin {
 	WebDriver ldriver;
-	public Epagelogin(WebDriver rdriver)
-	{
-		ldriver=rdriver;
+
+	public Epagelogin(WebDriver rdriver) {
+		ldriver = rdriver;
 		PageFactory.initElements(ldriver, this);
 	}
-	
-	@FindBy(css="#Email")
+
+	@FindBy(css = "#Email")
 	WebElement email;
-	
-	@FindBy(css="#Password")
+
+	@FindBy(css = "#Password")
 	WebElement pass;
-	
-	@FindBy(xpath="//button[normalize-space()='Log in']")
+
+	@FindBy(xpath = "//button[text()='Log in']")
 	WebElement login;
-	
-	@FindBy(xpath="//a[text()='Logout']")
+
+	@FindBy(xpath = "//a[text()='Logout']")
 	WebElement logout;
-	
-	public void enterEmail(String mail)
-	{
+
+	public void enterEmail(String mail) {
 		email.clear();
 		email.sendKeys(mail);
 	}
-	public void enterPassword(String passw)
-	{
+
+	public void enterPassword(String passw) {
 		pass.clear();
 		pass.sendKeys(passw);
 	}
-	public void clickonLogin()
-	{
+
+	public void clickonLogin() {
 		login.click();
 	}
-	public void clickOnLogout()
-	{
+
+	public void clickOnLogout() {
 		logout.click();
-	}
-	public void closeChrome()
-	{
-		ldriver.quit();
 	}
 
 }
