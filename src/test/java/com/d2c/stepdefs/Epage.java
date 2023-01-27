@@ -6,11 +6,14 @@ import org.openqa.selenium.TakesScreenshot;
 //import org.openqa.selenium.By;
 //import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 //import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.d2c.poc.AddCategory;
 import com.d2c.poc.Epagelogin;
 
+import Utilities.ReadConfig;
 import io.cucumber.java.*;
 import io.cucumber.java.en.*;
 
@@ -23,8 +26,25 @@ public class Epage extends BaseClass {
 	Logger log = LogManager.getLogger("Epage");
 
 	@Before
-	public void setUp() {
-		driver = new ChromeDriver();
+	public void setUp() throws Exception {
+
+		readconfig = new ReadConfig();
+		String browser = readconfig.getBrowser();
+
+		switch (browser.toLowerCase()) {
+		case "chrome":
+			driver = new ChromeDriver();
+			break;
+		case "firefox":
+			driver = new FirefoxDriver();
+			break;
+		case "edge":
+			driver = new EdgeDriver();
+			break;
+		default:
+			driver = null;
+			break;
+		}
 		log.info("Chrome Browser Launched");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		driver.manage().window().maximize();
@@ -35,6 +55,7 @@ public class Epage extends BaseClass {
 	public void tearDown() {
 		// driver.close();
 		driver.quit();
+		log.info("Epage Closed");
 	}
 
 	@AfterStep
@@ -71,7 +92,7 @@ public class Epage extends BaseClass {
 	@When("click on catalog and categories option")
 	public void click_on_catalog_and_categories_option() throws Exception {
 		ac.clickonCatalog();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		ac.clickonCategories();
 	}
 
@@ -83,15 +104,11 @@ public class Epage extends BaseClass {
 	@When("provide the product name {string}")
 	public void provide_the_product_name(String nam) throws Exception {
 		ac.provideName(nam);
-		// Thread.sleep(5000);
-		// ac.provideDescription(descrip);
+
 	}
 
 	@When("select the category as Computers")
 	public void select_the_category_as_computers() throws Exception {
-		// Select sc=new
-		// Select(driver.findElement(By.cssSelector("Select#ParentCategoryId")));
-		// sc.selectByVisibleText("Computers");
 		ac.selectCategory();
 	}
 
@@ -102,8 +119,9 @@ public class Epage extends BaseClass {
 	}
 
 	@When("click on save button")
-	public void click_on_save_button() {
+	public void click_on_save_button() throws Exception {
 		ac.clickonSave();
+		Thread.sleep(3000);
 	}
 
 	@When("click on logout button")

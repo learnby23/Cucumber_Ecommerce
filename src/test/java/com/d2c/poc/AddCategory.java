@@ -23,7 +23,7 @@ public class AddCategory {
 	@FindBy(css = "a.btn.btn-primary")
 	WebElement addnew;
 
-	@FindBy(css = "input#Name")
+	@FindBy(xpath="//input[@id='Name']")
 	WebElement name;
 
 	@FindBy(xpath = "//div[contains(text(),'New document')]")

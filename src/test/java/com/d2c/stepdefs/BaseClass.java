@@ -1,5 +1,7 @@
 package com.d2c.stepdefs;
 
+import org.apache.logging.log4j.Logger;
+
 //import java.time.Duration;
 
 //import org.junit.*;
@@ -8,13 +10,15 @@ import org.openqa.selenium.WebDriver;
 
 import com.d2c.poc.AddCategory;
 import com.d2c.poc.Epagelogin;
-import com.d2c.poc.Facebboklogon;
+
+import Utilities.ReadConfig;
 
 public class BaseClass {
 
 	public WebDriver driver;
 	public Epagelogin pg;
 	public AddCategory ac;
-	public Facebboklogon fl;
+	public static Logger log;
+	public ReadConfig readconfig;
 
 }
