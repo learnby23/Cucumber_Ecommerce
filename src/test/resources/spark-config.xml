@@ -18,6 +18,9 @@
         
         <!-- report name - displayed at top-nav -->
         <reportName>Build</reportName>
+        
+        <!-- to attach the image in spark report-->
+        <thumbnailForBase64>true</thumbnailForBase64>
 
 		<!-- timestamp format -->
 		<timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>

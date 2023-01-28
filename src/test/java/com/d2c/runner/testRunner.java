@@ -6,13 +6,21 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "./src/test/resources/Features/Epage.feature", glue = "com.d2c.stepdefs", monochrome = true, dryRun = false,
-		//tags = "@Sanity",
-		plugin = { "pretty", "html:Reports/basicreport.html",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }
+@CucumberOptions(
+		
+		features = "./src/test/resources/Features", 	// To add the feature
+		glue = "com.d2c.stepdefs", 						// To find the step definition code
+		monochrome = true, 								// To see the unified console 
+		dryRun = false,  								// To check the steps are mapped 
+		tags = "@Smoke", 								// To add the scenario tags
+		plugin = {										// To add the different plugin to see the report	
+		"pretty", 
+		"html:Reports/HTMLreport.html", 
+		"json:Reports/JSONreport.json", 
+		"junit:Reports/XMLreport.xml",
+		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }
 
 )
-
 public class testRunner {
 
 }

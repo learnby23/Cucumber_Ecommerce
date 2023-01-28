@@ -1,3 +1,4 @@
+com\d2c\stepdefs\Launch.class
 com\d2c\runner\testRunner.class
 com\d2c\stepdefs\BaseClass.class
 Utilities\ReadConfig.class

@@ -1,2 +1,2 @@
-cd C:\Users\Dell\eclipse-workspace\Winner_Cucumber\pom.xml
+cd C:\Users\Dell\eclipse-workspace\Winner_Cucumber\
 mvn clean install

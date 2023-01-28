@@ -1,7 +1,7 @@
-Feature: ECommerce Signup
+Feature: ECommerce
 
   @Smoke
-  Scenario Outline: ECommerce All Field Data Entry
+  Scenario Outline: ECommerce login with valid credentials
     Given provide the url of ecommerce "https://admin-demo.nopcommerce.com/login"
     When input the email address "<email>" and password "<password>"
     When click on Log in button

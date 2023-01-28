@@ -59,9 +59,16 @@ public class Epage extends BaseClass {
 	}
 
 	@AfterStep
-	public void takesScreenShots(Scenario scenario) {
-		final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-		scenario.attach(screenshot, "image/jpeg", "Image");
+	public void takesScreenShots(Scenario scenario) {  
+		
+		final byte[] screenshot =((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+		scenario.attach(screenshot, "image/png", "Click to see fullscreen image"); 
+		
+		/*
+		 * if (scenario.isFailed() == true) { final byte[] screenshot =
+		 * ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+		 * scenario.attach(screenshot, "image/png", "Click to see image"); }
+		 */
 	}
 
 	@Given("provide the url of ecommerce {string}")

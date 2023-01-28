@@ -118,8 +118,9 @@
 						<includes>
 							<include>testRunner.java</include>
 						</includes>
-						<parallel>methods</parallel>
-						<useUnlimitedThreads>true</useUnlimitedThreads>
+						<!--<parallel>methods</parallel>-->
+						<!--<threadCountMethods>2</threadCountMethods>-->
+						<!--<useUnlimitedThreads>true</useUnlimitedThreads>-->
 					</configuration>
 				</plugin>
 				<plugin>
