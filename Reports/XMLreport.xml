@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="71.424" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="ECommerce" name="ECommerce login with valid credentials - Example #1.1" time="70.988">
+<testsuite name="Cucumber" time="32.257" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="ECommerce" name="ECommerce login with valid credentials - Example #1.1" time="31.929">
 <system-out><![CDATA[
 Given provide the url of ecommerce "https://admin-demo.nopcommerce.com/login".passed
 When input the email address "admin@yourstore.com" and password "admin".....passed

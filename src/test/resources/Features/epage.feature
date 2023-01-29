@@ -1,6 +1,6 @@
 Feature: ECommerce
 
-  @Smoke
+  @login @valid
   Scenario Outline: ECommerce login with valid credentials
     Given provide the url of ecommerce "https://admin-demo.nopcommerce.com/login"
     When input the email address "<email>" and password "<password>"
@@ -12,7 +12,7 @@ Feature: ECommerce
       | email               | password |
       | admin@yourstore.com | admin    |
 
-  @Sanity
+  @new @category
   Scenario Outline: Add a new category under Catalog
     Given provide the url of ecommerce "https://admin-demo.nopcommerce.com/login"
     When input the email address "<email>" and password "<password>"

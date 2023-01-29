@@ -1,75 +1,16 @@
 package com.d2c.stepdefs;
 
 import org.apache.logging.log4j.*;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-//import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import com.d2c.poc.AddCategory;
 import com.d2c.poc.Epagelogin;
-
-import Utilities.ReadConfig;
-import io.cucumber.java.*;
 import io.cucumber.java.en.*;
 
-import java.time.Duration;
 
 import org.junit.Assert;
 
 public class Epage extends BaseClass {
 
 	Logger log = LogManager.getLogger("Epage");
-
-	@Before
-	public void setUp() throws Exception {
-
-		readconfig = new ReadConfig();
-		String browser = readconfig.getBrowser();
-
-		switch (browser.toLowerCase()) {
-		case "chrome":
-			driver = new ChromeDriver();
-			break;
-		case "firefox":
-			driver = new FirefoxDriver();
-			break;
-		case "edge":
-			driver = new EdgeDriver();
-			break;
-		default:
-			driver = null;
-			break;
-		}
-		log.info("Chrome Browser Launched");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-		driver.manage().window().maximize();
-		log.info("The Window is Maximized");
-	}
-
-	@After
-	public void tearDown() {
-		// driver.close();
-		driver.quit();
-		log.info("Epage Closed");
-	}
-
-	@AfterStep
-	public void takesScreenShots(Scenario scenario) {  
-		
-		final byte[] screenshot =((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-		scenario.attach(screenshot, "image/png", "Click to see fullscreen image"); 
-		
-		/*
-		 * if (scenario.isFailed() == true) { final byte[] screenshot =
-		 * ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-		 * scenario.attach(screenshot, "image/png", "Click to see image"); }
-		 */
-	}
 
 	@Given("provide the url of ecommerce {string}")
 	public void provide_the_url_of_ecommerce(String url) {
