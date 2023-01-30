@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.d2c.runner.testRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.32 s - in com.d2c.runner.testRunner
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 88.717 s <<< FAILURE! - in com.d2c.runner.testRunner
+ECommerce login with valid credentials(ECommerce)  Time elapsed: 72.064 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...merce administration[1]> but was:<...merce administration[]>
+

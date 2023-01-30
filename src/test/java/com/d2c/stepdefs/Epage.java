@@ -1,33 +1,33 @@
 package com.d2c.stepdefs;
 
-import org.apache.logging.log4j.*;
 import com.d2c.poc.AddCategory;
 import com.d2c.poc.Epagelogin;
 import io.cucumber.java.en.*;
 
-
 import org.junit.Assert;
 
 public class Epage extends BaseClass {
-
-	Logger log = LogManager.getLogger("Epage");
 
 	@Given("provide the url of ecommerce {string}")
 	public void provide_the_url_of_ecommerce(String url) {
 		pg = new Epagelogin(driver);
 		ac = new AddCategory(driver);
 		driver.get(url);
+
 	}
 
 	@When("input the email address {string} and password {string}")
 	public void input_the_email_address_and_password(String email, String pwd) {
 		pg.enterEmail(email);
+		log.info("The email id is provided");
 		pg.enterPassword(pwd);
+		log.info("The password is provided");
 	}
 
 	@When("click on Log in button")
 	public void click_on_log_in_button() {
 		pg.clickonLogin();
+		log.info("clicked on log in button");
 
 	}
 
