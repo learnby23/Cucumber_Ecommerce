@@ -1,4 +1,4 @@
-package com.d2c.stepdefs;
+package com.d2c.hooks;
 
 import java.time.Duration;
 
@@ -7,6 +7,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.d2c.stepdefs.BaseClass;
 
 import Utilities.ReadConfig;
 import io.cucumber.java.After;

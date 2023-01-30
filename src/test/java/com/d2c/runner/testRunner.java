@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		
 		features = "./src/test/resources/Features", 	// To add the feature
-		glue = "com.d2c.stepdefs", 						// To find the step definition code
-		monochrome = false, 								// To see the unified console 
+		glue = {"com.d2c.stepdefs","com.d2c.hooks"}, 						// To find the step definition code
+		monochrome = false, 								// Optional in the latest versions use pretty plugin
 		dryRun =false,  								    // To check the steps are mapped 
 		tags = "@login and @valid", 					 			// To add the scenario tags
 		plugin = {										// To add the different plugin to see the report	

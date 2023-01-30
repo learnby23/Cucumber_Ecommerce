@@ -5,7 +5,7 @@ Feature: ECommerce
     Given provide the url of ecommerce "https://admin-demo.nopcommerce.com/login"
     When input the email address "<email>" and password "<password>"
     When click on Log in button
-    Then verfiy the title as "Dashboard / nopCommerce administration"
+    Then verfiy the title as "Dashboard / nopCommerce administration1"
     When click on logout button
 
     Examples: 
