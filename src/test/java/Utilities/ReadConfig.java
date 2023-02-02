@@ -6,7 +6,7 @@ import java.util.Properties;
 public class ReadConfig {
 
 	Properties properties;
-	String path = "config.properties";
+	String path = "./src/test/resources/config.properties";
 
 	public ReadConfig() throws Exception {
 		properties = new Properties();
